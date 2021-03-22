@@ -1,25 +1,25 @@
 variable "region" {
-	default = "us-west-1"
+  default = "us-west-1"
 }
 variable "namespace" {
   description = "namespace, which could be your organiation name, e.g. amazon"
-  default = "test"
+  default     = "testns"
 }
 variable "env" {
   description = "environment, e.g. 'sit', 'uat', 'prod' etc"
-  default = "test"
+  default     = "testenv"
 }
 variable "account" {
   description = "account, which could be AWS Account Name or Number"
-  default = "test"
+  default     = "testacc"
 }
 variable "name" {
   description = "stack name"
-  default = "test"
+  default     = "testname"
 }
 variable "delimiter" {
   description = "delimiter, which could be used between name, namespace and env"
-  default = "-"
+  default     = "-"
 }
 variable "attributes" {
   #type        = list(string)
