@@ -15,9 +15,9 @@ The Terraform Amazon Web Services (AWS) Label module generates consistent label 
 
 ```delimiter``` - Character such as a slash (```/```) used between ```name```, ```namespace```, and ```env``` to form the resource name.
 
-```attributes``` - which could be used for additional attributes
+```attributes``` - Additional attributes.
 
-```tags``` - which could be used for additional tags
+```tags``` - Additional tags.
 
 ## Usage
 
@@ -44,17 +44,17 @@ module "label" {
 
 ## Outputs
 
-```tags``` - list of tags
+```tags``` - List of tags.
 
-```id``` - id of the tag delimited with "-"
+```id``` - ID of a tag delimited with ```-```.
 
-```name``` - stack name
+```name``` - Stack name.
 
-```namespace``` - namespace
+```namespace``` - Namespace.
 
-```account``` - AWS Account
+```account``` - AWS account.
 
-```env``` - environment name
+```env``` - Environment name.
 
-```attributes``` - list of additional attributes
+```attributes``` - List of additional attributes.
 
