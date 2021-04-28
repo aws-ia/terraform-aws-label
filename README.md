@@ -9,7 +9,7 @@ The Terraform Amazon Web Services (AWS) Label module generates consistent label 
 
 ```env``` - Environment name (for example, ```sit```, ```uat```, or ```prod```).
 
-```account``` - Account, which could be an AWS account name or number.
+```account``` - AWS account name or number.
 
 ```name``` - Stack name.
 
