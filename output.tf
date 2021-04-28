@@ -1,11 +1,11 @@
 
 output "tags" {
-  value = merge(map(
-    "Name", join("", null_resource.default.*.triggers.id),
-    "Namespace", join("", null_resource.default.*.triggers.namespace),
-    "Account", join("", null_resource.default.*.triggers.account),
-    "Env", join("", null_resource.default.*.triggers.env)
-  ), var.tags)
+  value = merge(tomap({
+    "Name"      = join("", null_resource.default.*.triggers.id),
+    "Namespace" = join("", null_resource.default.*.triggers.namespace),
+    "Account"   = join("", null_resource.default.*.triggers.account),
+    "Env"       = join("", null_resource.default.*.triggers.env)
+  }), var.tags)
 }
 
 output "id" {
