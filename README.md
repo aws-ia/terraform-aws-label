@@ -1,16 +1,17 @@
 # terraform-aws-label
 The Terraform AWS Label module generates consistent label names and tags for Terraform resources.
 
-## Module Input Variables
-```region``` - AWS Region used to host the resources.
+## Module input variables
 
-```namespace``` - namespace, which could be your organisation/department name, e.g. amazon
+```region``` - AWS Region used to host Terraform resources.
 
-```env``` - environment name e.g. 'sit', 'uat', 'prod' etc
+```namespace``` - Namespace, generally your organization or department name (for example, AWS).
 
-```account``` - which could be AWS Account Name or Number
+```env``` - Environment name (for example, 'sit', 'uat', or 'prod').
 
-```name``` - stack name
+```account``` - Account, which could be an AWS account name or number.
+
+```name``` - Stack name.
 
 ```delimiter``` - which could be used between name, namespace and env to form the resource name
 
