@@ -1,5 +1,5 @@
 # terraform-aws-label
-The Terraform AWS Label module generates consistent label names and tags for Terraform resources.
+The Terraform Amazon Web Services (AWS) Label module generates consistent label names and tags for Terraform resources.
 
 ## Module input variables
 
