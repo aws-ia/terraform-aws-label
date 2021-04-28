@@ -1,6 +1,5 @@
 provider "aws" {
-  region  = "var.region"
-  version = "~> 3.0"
+  region = "var.region"
 }
 
 resource "null_resource" "default" {
