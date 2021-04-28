@@ -1,6 +1,7 @@
 # terraform-aws-label
-A Terraform module implemented to generate uniform and consistent naming and tags for terraform resources.
-# Module Input Variables
+The Terraform AWS Label module generates consistent label names and tags for Terraform resources.
+
+## Module Input Variables
 ```region``` - AWS Region used to host the resources.
 
 ```namespace``` - namespace, which could be your organisation/department name, e.g. amazon
@@ -17,7 +18,8 @@ A Terraform module implemented to generate uniform and consistent naming and tag
 
 ```tags``` - which could be used for additional tags
 
-# Usage
+## Usage
+
 module "label" {
 
     source = "git@github.com:aws-quickstart/terraform-aws-label.git"
@@ -39,7 +41,8 @@ module "label" {
 }
 
 
-# Outputs
+## Outputs
+
 ```tags``` - list of tags
 
 ```id``` - id of the tag delimited with "-"
