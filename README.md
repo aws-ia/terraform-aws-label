@@ -20,21 +20,23 @@ A Terraform module implemented to generate uniform and consistent naming and tag
 # Usage
 module "label" {
 
-    source = "git@github.com:aws-quickstart/terraform-aws-label.git"
+    source  = "aws-quickstart/label/aws"
+
+    version = "0.0.1"
 
     region = "us-east-1"
 
-    namespace = "it-digial"
+    namespace = "my org"
 
     env = "sit"
 
     account = "aws-account-name"
 
-    name = "stackname"
+    name = "deployment name"
 
     delimiter = "-"
 
-    tags = "${map("key","name","value","${var.name}","propogate_at_launch","true","terraform","true")}"
+    tags      = tomap({ propogate_at_launch = "true", "terraform" = "true" })
 
 }
 
