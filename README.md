@@ -3,21 +3,21 @@ The Terraform Amazon Web Services (AWS) Label module generates consistent label 
 
 ## Module input variables
 
-```region``` - AWS Region used to host Terraform resources.
+* ```region``` - AWS Region used to host Terraform resources.
 
-```namespace``` - Namespace, generally your organization or department name (for example, ```AWS```).
+* ```namespace``` - Namespace, generally your organization or department name (for example, ```AWS```).
 
-```env``` - Environment name (for example, ```sit```, ```uat```, or ```prod```).
+* ```env``` - Environment name (for example, ```sit```, ```uat```, or ```prod```).
 
-```account``` - AWS account name or number.
+* ```account``` - AWS account name or number.
 
-```name``` - Stack name.
+* ```name``` - Stack name.
 
-```delimiter``` - Character such as a slash (/) used between ```name```, ```namespace```, and ```env``` to form the resource name.
+* ```delimiter``` - Character such as a slash (/) used between ```name```, ```namespace```, and ```env``` to form the resource name.
 
-```attributes``` - Additional attributes.
+* ```attributes``` - Additional attributes.
 
-```tags``` - Additional tags.
+* ```tags``` - Additional tags.
 
 ## Usage
 
@@ -44,17 +44,16 @@ module "label" {
 
 ## Outputs
 
-```tags``` - List of tags.
+* ```tags``` - List of tags.
 
-```id``` - ID of a tag delimited with a dash (-).
+* ```id``` - ID of a tag delimited with a dash (-).
 
-```name``` - Stack name.
+* ```name``` - Stack name.
 
-```namespace``` - Namespace.
+* ```namespace``` - Namespace.
 
-```account``` - AWS account.
+* ```account``` - AWS account.
 
-```env``` - Environment name.
+* ```env``` - Environment name.
 
-```attributes``` - List of additional attributes.
-
+* ```attributes``` - List of additional attributes.
