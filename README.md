@@ -1,23 +1,26 @@
-# terraform-aws-label
-A Terraform module implemented to generate uniform and consistent naming and tags for terraform resources.
-# Module Input Variables
-```region``` - AWS Region used to host the resources.
+# Terraform AWS Label module
+The Terraform Amazon Web Services (AWS) Label module generates consistent label names and tags for Terraform resources.
 
-```namespace``` - namespace, which could be your organisation/department name, e.g. amazon
+## Module input variables
 
-```env``` - environment name e.g. 'sit', 'uat', 'prod' etc
+* ```region``` - AWS Region used to host Terraform resources.
 
-```account``` - which could be AWS Account Name or Number
+* ```namespace``` - Namespace, generally your organization or department name (for example, ```AWS```).
 
-```name``` - stack name
+* ```env``` - Environment name (for example, ```sit```, ```uat```, or ```prod```).
 
-```delimiter``` - which could be used between name, namespace and env to form the resource name
+* ```account``` - AWS account name or number.
 
-```attributes``` - which could be used for additional attributes
+* ```name``` - Stack name.
 
-```tags``` - which could be used for additional tags
+* ```delimiter``` - Character such as a slash (/) used between ```name```, ```namespace```, and ```env``` to form the resource name.
 
-# Usage
+* ```attributes``` - Additional attributes.
+
+* ```tags``` - Additional tags.
+
+## Usage
+
 module "label" {
 
     source  = "aws-quickstart/label/aws"
@@ -41,18 +44,18 @@ module "label" {
 }
 
 
-# Outputs
-```tags``` - list of tags
+## Outputs
 
-```id``` - id of the tag delimited with "-"
+* ```tags``` - List of tags.
 
-```name``` - stack name
+* ```id``` - ID of a tag delimited with a dash (-).
 
-```namespace``` - namespace
+* ```name``` - Stack name.
 
-```account``` - AWS Account
+* ```namespace``` - Namespace.
 
-```env``` - environment name
+* ```account``` - AWS account.
 
-```attributes``` - list of additional attributes
+* ```env``` - Environment name.
 
+* ```attributes``` - List of additional attributes.
