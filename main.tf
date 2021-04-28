@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "null_resource" "default" {
   triggers = {
-    id         = lower(join(var.delimiter, compact(concat(list(var.namespace, var.account, var.env, var.name), var.attributes))))
+    id         = lower(join(var.delimiter, compact(concat([var.namespace, var.account, var.env, var.name], var.attributes))))
     name       = lower(format("%v", var.name))
     namespace  = lower(format("%v", var.namespace))
     account    = lower(format("%v", var.account))
