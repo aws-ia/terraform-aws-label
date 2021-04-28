@@ -46,7 +46,7 @@ module "label" {
 
 ```tags``` - List of tags.
 
-```id``` - ID of a tag delimited with ```-```.
+```id``` - ID of a tag delimited with a dash (-).
 
 ```name``` - Stack name.
 
