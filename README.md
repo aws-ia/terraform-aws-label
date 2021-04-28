@@ -5,9 +5,9 @@ The Terraform AWS Label module generates consistent label names and tags for Ter
 
 ```region``` - AWS Region used to host Terraform resources.
 
-```namespace``` - Namespace, generally your organization or department name (for example, AWS).
+```namespace``` - Namespace, generally your organization or department name (for example, ```AWS```).
 
-```env``` - Environment name (for example, 'sit', 'uat', or 'prod').
+```env``` - Environment name (for example, ```sit```, ```uat```, or ```prod```).
 
 ```account``` - Account, which could be an AWS account name or number.
 
