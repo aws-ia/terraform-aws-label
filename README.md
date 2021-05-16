@@ -1,41 +1,79 @@
+
 # Terraform AWS Label Module
 The Terraform Amazon Web Services (AWS) Label module generates consistent label names and tags for Terraform resources.
 
-## Module input variables
+---
 
-* ```region``` - AWS Region used to host Terraform resources.
+## Inputs
 
-* ```namespace``` - Namespace, generally your organization or department name (for example, ```AWS```).
+* ```region```
+    * description: AWS Region used to host Terraform resources.
+    * type: ``` string ```
+    * default: ``` us-west-1 ```
+    <br />
 
-* ```env``` - Environment name (for example, ```sit```, ```uat```, or ```prod```).
+* ```namespace```
+    * description: Namespace, generally your organization or department name (for example, ```AWS```)
+    * type: ``` string ```
+    * default: ``` testenv ```
+    <br />
 
-* ```account``` - AWS account name or number.
+* ```env```
+    * description: Environment name (for example, ```sit```, ```uat```, or ```prod```)
+    * type: ``` string ```
+    * default: ``` testns ```
+    <br />
 
-* ```name``` - Stack name.
+* ```account```
+    * description: AWS account name or number.
+    * type: ``` string ```
+    * default: ``` testacc ```
+    <br />
 
-* ```delimiter``` - Character such as a slash (/) used between ```name```, ```namespace```, and ```env``` to form the resource name.
+* ```name```
+    * description: Stack name
+    * type: ``` string ```
+    * default: ``` testname ```
+    <br />
 
-* ```attributes``` - Additional attributes.
 
-* ```tags``` - Additional tags.
+* ```delimiter```
+    * description: Character such as a slash (/) used between ```name```, ```namespace```, and ```env``` to form the resource name.
+    * type: ``` string ```
+    * default: ``` - ```
+    <br />
+
+* ```attributes```
+    * description: Additional attributes.
+    * type: ``` list ```
+    * default: ``` [] ```
+    <br />
+
+* ```tags```
+    * description: Additional tags.
+    * type: ``` map ```
+    * default: ``` {} ```
+    <br />
+
+---
 
 ## Usage
 
 module "label" {
 
-    source  = "aws-quickstart/label/aws"
+    source    = "aws-quickstart/label/aws"
 
-    version = "0.0.1"
+    version   = "0.0.1"
 
-    region = "us-east-1"
+    region    = "us-east-1"
 
     namespace = "my org"
 
-    env = "sit"
+    env       = "sit"
 
-    account = "aws-account-name"
+    account   = "aws-account-name"
 
-    name = "deployment name"
+    name      = "deployment name"
 
     delimiter = "-"
 
@@ -43,6 +81,7 @@ module "label" {
 
 }
 
+---
 
 ## Outputs
 
@@ -59,3 +98,5 @@ module "label" {
 * ```env``` - Environment name.
 
 * ```attributes``` - List of additional attributes.
+
+---
