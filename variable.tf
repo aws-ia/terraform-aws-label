@@ -22,13 +22,11 @@ variable "delimiter" {
   default     = "-"
 }
 variable "attributes" {
-  #type        = list(string)
   default     = []
   description = "atttributes, which could be used for additional attributes"
 }
 
 variable "tags" {
-  #type        = map(string)
   default     = {}
   description = "tags, which could be used for additional tags"
 }
