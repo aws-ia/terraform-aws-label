@@ -61,7 +61,7 @@ The Terraform Amazon Web Services (AWS) Label module generates consistent label 
 
 module "label" {
 
-    source    = "aws-quickstart/label/aws"
+    source    = "aws-ia/label/aws"
 
     version   = "0.0.1"
 
