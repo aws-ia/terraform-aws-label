@@ -1,7 +1,3 @@
-provider "aws" {
-  region = "var.region"
-}
-
 resource "null_resource" "default" {
   triggers = {
     id         = lower(join(var.delimiter, compact(concat([var.namespace, var.account, var.env, var.name], var.attributes))))

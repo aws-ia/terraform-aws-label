@@ -51,35 +51,30 @@ The Terraform Amazon Web Services (AWS) Label module generates consistent label 
 
 * ```tags```
     * description: Additional tags.
-    * type: ``` map ```
-    * default: ``` {} ```
+    * type: ``` list(object({
+      key   = string
+      value = string
+      })) ```
+    * default: ``` [] ```
     <br />
 
 ---
 
 ## Usage
 
-module "label" {
+    module "label" {
+      source    = "aws-ia/label/aws"
+      version   = "0.0.2"
+      region    = "us-east-1"
+      namespace = "my org"
+      env       = "sit"
+      account   = "aws-account-name"
+      name      = "deployment name"
+      delimiter = "-"
+      tags      = tomap({ propogate_at_launch = "true", "terraform" = "true" })
+    }
 
-    source    = "aws-ia/label/aws"
-
-    version   = "0.0.1"
-
-    region    = "us-east-1"
-
-    namespace = "my org"
-
-    env       = "sit"
-
-    account   = "aws-account-name"
-
-    name      = "deployment name"
-
-    delimiter = "-"
-
-    tags      = tomap({ propogate_at_launch = "true", "terraform" = "true" })
-
-}
+For more information please see the `examples` folder.
 
 ---
 
