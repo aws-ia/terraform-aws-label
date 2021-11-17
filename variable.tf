@@ -33,11 +33,7 @@ variable "attributes" {
 }
 
 variable "tags" {
-  type = list(object({
-    key   = string
-    value = string
-  }))
-
-  default = []
   description = "tags, which could be used for additional tags"
+  type        = any
+  default     = []
 }
