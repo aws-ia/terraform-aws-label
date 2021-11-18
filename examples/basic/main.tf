@@ -3,7 +3,7 @@ provider "awscc" {
 }
 
 module "labels" {
-  source = "../"
+  source = "../.."
 
   name      = "measurements"
   namespace = "link"

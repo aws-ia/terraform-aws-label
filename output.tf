@@ -3,6 +3,10 @@ output "tags" {
   value = local.tags
 }
 
+output "tags_aws" {
+  value = local.tags_aws
+}
+
 output "id" {
   value = join("", null_resource.default.*.triggers.id)
 }
