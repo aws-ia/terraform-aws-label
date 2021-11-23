@@ -36,3 +36,6 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+test_report.html
+
+.idea
