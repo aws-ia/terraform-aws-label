@@ -1,0 +1,1 @@
+../../examples/formatted_tags/main.tf
