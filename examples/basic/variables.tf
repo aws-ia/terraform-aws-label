@@ -1,3 +1,7 @@
+##########################################
+# Note: this file is symlinked into /tests
+##########################################
+
 variable "region" {
   type        = string
   default     = "eu-west-1"

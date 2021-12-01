@@ -1,3 +1,7 @@
+##########################################
+# Note: this file is symlinked into /tests
+##########################################
+
 provider "awscc" {
   region = var.region
 }

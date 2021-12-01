@@ -17,7 +17,7 @@ resource "test_assertions" "matching_formatted_labels_awscc" {
   component = "tags"
 
   check "valid_tags_for_awscc" {
-    description = "Validate tags formatting for AWSCC Provider usage. expected: {key=\"foo\", values=\"bar\"}"
+    description = "Validate tags formatting for AWSCC Provider usage. expected: {key=\"foo\", value=\"bar\"}"
     condition   = length(setunion(setsubtract(local.awscc_tags_formatted["test_aws_to_awscc"], local.awscc_tags_formatted["test_awscc_to_awscc"]), setsubtract(local.awscc_tags_formatted["test_awscc_to_awscc"], local.awscc_tags_formatted["test_aws_to_awscc"]))) == 0
   }
 }
