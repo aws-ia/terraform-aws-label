@@ -30,3 +30,17 @@ resource "test_assertions" "matching_formatted_labels_aws" {
     condition   = module.aws_labels.tags_aws == module.awscc_labels.tags_aws
   }
 }
+resource "test_assertions" "expect_failure" {
+  component = "tags"
+
+  check "fail" {
+    description = "this test should fail"
+    condition   = true == false
+  }
+  equal "scheme" {
+    description = "should fail"
+    got         = true
+    want        = false 
+  }
+
+}
