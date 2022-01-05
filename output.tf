@@ -8,25 +8,21 @@ output "tags_aws" {
 }
 
 output "id" {
-  value = join("", null_resource.default.*.triggers.id)
+  value = local.ordered_id
 }
 
 output "name" {
-  value = join("", null_resource.default.*.triggers.name)
+  value = local.vars["name"]
 }
 
 output "namespace" {
-  value = join("", null_resource.default.*.triggers.namespace)
+  value = local.vars["namespace"]
 }
 
 output "account" {
-  value = join("", null_resource.default.*.triggers.account)
+  value = local.vars["account"]
 }
 
 output "env" {
-  value = join("", null_resource.default.*.triggers.env)
-}
-
-output "attributes" {
-  value = join("", null_resource.default.*.triggers.attributes)
+  value = local.vars["env"]
 }
