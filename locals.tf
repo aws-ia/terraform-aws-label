@@ -1,13 +1,4 @@
-# resource "null_resource" "default" {
-#   triggers = local.non_empty_vars_map
-
-#   lifecycle {
-#     create_before_destroy = true
-#   }
-# }
-
 locals {
-  order = ["namespace", "account", "env", "name"]
   vars = {
     name      = var.name
     namespace = var.namespace
