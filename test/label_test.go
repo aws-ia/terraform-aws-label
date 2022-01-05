@@ -6,7 +6,7 @@ import (
 	"github.com/gruntwork-io/terratest/modules/terraform"
 )
 
-func validate(t *testing.T, terraformOptions *terraform.Options)  {
+func validate(t *testing.T, terraformOptions *terraform.Options) {
 	defer terraform.Destroy(t, terraformOptions)
 	terraform.InitAndApply(t, terraformOptions)
 }
@@ -30,4 +30,3 @@ func TestFormattedTags(t *testing.T) {
 
 	validate(t, terraformOptions)
 }
-
