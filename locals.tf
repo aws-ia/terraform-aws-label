@@ -1,9 +1,9 @@
 locals {
   vars = {
-    name      = var.name
     namespace = var.namespace
-    env       = var.env
     account   = var.account
+    env       = var.env
+    name      = var.name
   }
   non_empty_vars     = [for k, v in local.vars : k if v != null]
   non_empty_vars_map = { for k in local.non_empty_vars : k => local.vars[k] }
