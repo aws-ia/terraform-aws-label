@@ -47,8 +47,8 @@ variable "tags" {
 
 variable "id_order" {
   description = "The order in which the `id` is constructed. Default yields `namespace-account-env-name` if your var.delimiter is `-`. Variables that are not populated but order is preserved. Eg: If no `var.namespace` and `var.account` are not specified, yields `env-name`."
-  type    = list(any)
-  default = ["namespace", "account", "env", "name"]
+  type        = list(any)
+  default     = ["namespace", "account", "env", "name"]
   validation {
     condition = anytrue([
       contains(var.id_order, "namespace"),
