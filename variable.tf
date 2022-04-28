@@ -29,18 +29,18 @@ variable "name" {
 
 variable "delimiter" {
   type        = string
-  description = "delimiter, which could be used between name, namespace and env"
+  description = "delimiter, which could be used between name, namespace and env."
   default     = "-"
 }
 
 variable "attributes" {
   type        = list(any)
   default     = []
-  description = "attributes, which could be used for additional attributes"
+  description = "attributes, which could be used for additional attributes."
 }
 
 variable "tags" {
-  description = "tags, which could be used for additional tags"
+  description = "tags, which could be used for additional tags."
   type        = any
   default     = []
 }
