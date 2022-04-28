@@ -5,11 +5,11 @@ provider "awscc" {
 module "labels" {
   source = "../.."
 
-  name      = "measurements"
-  namespace = "link"
+  name      = var.name
+  namespace = var.namespace
 
-  env     = "sandbox"
-  account = "sandbox001"
+  env     = var.env
+  account = var.account
 
   region = var.region
   tags = [
