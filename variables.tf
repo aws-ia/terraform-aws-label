@@ -1,8 +1,3 @@
-variable "region" {
-  type    = string
-  default = "us-west-1"
-}
-
 variable "namespace" {
   type        = string
   description = "namespace, which could be your organization name, e.g. amazon"
