@@ -1,9 +1,9 @@
 output "tags" {
-  description = "output of tags."
+  description = "Output of tags."
   value       = module.labels.tags
 }
 
 output "id" {
-  description = "computed id."
+  description = "Computed id."
   value       = module.labels.id
 }
