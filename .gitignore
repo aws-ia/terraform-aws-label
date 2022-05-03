@@ -39,3 +39,5 @@ terraform.rc
 test_report.html
 
 .idea
+go.mod
+go.sum
