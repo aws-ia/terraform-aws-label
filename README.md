@@ -34,7 +34,6 @@ No resources.
 | <a name="input_id_order"></a> [id\_order](#input\_id\_order) | The order in which the `id` is constructed. Default yields `namespace-account-env-name` if your var.delimiter is `-`. Variables that are not populated but order is preserved. Eg: If no `var.namespace` and `var.account` are not specified, yields `env-name`. | `list(any)` | <pre>[<br>  "namespace",<br>  "account",<br>  "env",<br>  "name"<br>]</pre> | no |
 | <a name="input_name"></a> [name](#input\_name) | stack name | `string` | `null` | no |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | namespace, which could be your organization name, e.g. amazon | `string` | `null` | no |
-| <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"us-west-1"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | tags, which could be used for additional tags | `any` | `[]` | no |
 
 ## Outputs
